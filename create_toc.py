@@ -1,10 +1,10 @@
-import random
 import string
 import re
+import secrets
 
 # Function to generate a random string of 5 uppercase characters (letters and digits)
 def generate_random_string(length=5):
-    return ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
+    return ''.join(secrets.SystemRandom().choices(string.ascii_uppercase + string.digits, k=length))
 
 # Function to remove the existing random string from the header
 def remove_existing_random_string(header):
